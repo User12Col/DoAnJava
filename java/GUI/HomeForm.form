@@ -72,7 +72,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="ProductLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="OrderDetailLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="pxhLabel1" min="-2" max="-2" attributes="0"/>
+                      <Component id="productDetailLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
@@ -108,7 +108,7 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="CategoryLabel" min="-2" max="-2" attributes="0"/>
                       <Component id="SupplierLabel" min="-2" max="-2" attributes="0"/>
-                      <Component id="pxhLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="importDetailLabel" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
               </Group>
@@ -179,16 +179,16 @@
                                       </Group>
                                       <Group type="102" alignment="1" attributes="0">
                                           <Group type="103" groupAlignment="0" attributes="0">
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
+                                                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                              </Group>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="inventoryLabel" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                                                  <Component id="pxhLabel" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
-                                                  <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="11" max="-2" attributes="0"/>
-                                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                                  </Group>
+                                                  <Component id="importDetailLabel" alignment="3" min="-2" pref="45" max="-2" attributes="0"/>
                                               </Group>
                                               <Component id="pnhLabel" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
-                                              <Component id="pxhLabel1" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
+                                              <Component id="productDetailLabel" alignment="0" min="-2" pref="45" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
                                       </Group>
@@ -366,6 +366,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Import Coupon"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnhLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="OrderLabel">
           <Properties>
@@ -404,6 +407,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Order Detail"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="OrderDetailLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="CustomerLabel">
           <Properties>
@@ -525,6 +531,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Inventory"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="inventoryLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel21">
           <Properties>
@@ -533,7 +542,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="pxhLabel">
+        <Component class="javax.swing.JLabel" name="importDetailLabel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -546,6 +555,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Import Detail"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="importDetailLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel23">
           <Properties>
@@ -578,7 +590,7 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="pxhLabel1">
+        <Component class="javax.swing.JLabel" name="productDetailLabel">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -591,6 +603,9 @@
             </Property>
             <Property name="text" type="java.lang.String" value="Product Detail"/>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="productDetailLabelMouseClicked"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
           <Properties>

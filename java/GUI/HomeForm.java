@@ -51,11 +51,11 @@ public class HomeForm extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         inventoryLabel = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        pxhLabel = new javax.swing.JLabel();
+        importDetailLabel = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         EmployeeLabel = new javax.swing.JLabel();
         jLabel25 = new javax.swing.JLabel();
-        pxhLabel1 = new javax.swing.JLabel();
+        productDetailLabel = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -135,6 +135,11 @@ public class HomeForm extends javax.swing.JFrame {
         pnhLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         pnhLabel.setForeground(new java.awt.Color(255, 0, 0));
         pnhLabel.setText("Import Coupon");
+        pnhLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnhLabelMouseClicked(evt);
+            }
+        });
 
         OrderLabel.setBackground(new java.awt.Color(255, 255, 255));
         OrderLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -152,6 +157,11 @@ public class HomeForm extends javax.swing.JFrame {
         OrderDetailLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         OrderDetailLabel.setForeground(new java.awt.Color(255, 0, 0));
         OrderDetailLabel.setText("Order Detail");
+        OrderDetailLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OrderDetailLabelMouseClicked(evt);
+            }
+        });
 
         CustomerLabel.setBackground(new java.awt.Color(255, 255, 255));
         CustomerLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -209,13 +219,23 @@ public class HomeForm extends javax.swing.JFrame {
         inventoryLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         inventoryLabel.setForeground(new java.awt.Color(255, 0, 0));
         inventoryLabel.setText("Inventory");
+        inventoryLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                inventoryLabelMouseClicked(evt);
+            }
+        });
 
         jLabel21.setIcon(new javax.swing.ImageIcon("D:\\TaiLieu\\JavaSwing\\DoAn\\Logo\\truck_24px.png")); // NOI18N
 
-        pxhLabel.setBackground(new java.awt.Color(255, 255, 255));
-        pxhLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        pxhLabel.setForeground(new java.awt.Color(255, 0, 0));
-        pxhLabel.setText("Import Detail");
+        importDetailLabel.setBackground(new java.awt.Color(255, 255, 255));
+        importDetailLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        importDetailLabel.setForeground(new java.awt.Color(255, 0, 0));
+        importDetailLabel.setText("Import Detail");
+        importDetailLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                importDetailLabelMouseClicked(evt);
+            }
+        });
 
         jLabel23.setIcon(new javax.swing.ImageIcon("D:\\TaiLieu\\JavaSwing\\DoAn\\Logo\\forward_arrow_24px.png")); // NOI18N
 
@@ -231,10 +251,15 @@ public class HomeForm extends javax.swing.JFrame {
 
         jLabel25.setIcon(new javax.swing.ImageIcon("D:\\TaiLieu\\JavaSwing\\DoAn\\Logo\\relay_24px.png")); // NOI18N
 
-        pxhLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        pxhLabel1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        pxhLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        pxhLabel1.setText("Product Detail");
+        productDetailLabel.setBackground(new java.awt.Color(255, 255, 255));
+        productDetailLabel.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        productDetailLabel.setForeground(new java.awt.Color(255, 0, 0));
+        productDetailLabel.setText("Product Detail");
+        productDetailLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                productDetailLabelMouseClicked(evt);
+            }
+        });
 
         jLabel6.setIcon(new javax.swing.ImageIcon("D:\\TaiLieu\\JavaSwing\\DoAn\\Logo\\activity_history_24px.png")); // NOI18N
 
@@ -266,7 +291,7 @@ public class HomeForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ProductLabel)
                     .addComponent(OrderDetailLabel)
-                    .addComponent(pxhLabel1))
+                    .addComponent(productDetailLabel))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(81, 81, 81)
@@ -294,7 +319,7 @@ public class HomeForm extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(CategoryLabel)
                     .addComponent(SupplierLabel)
-                    .addComponent(pxhLabel))
+                    .addComponent(importDetailLabel))
                 .addGap(26, 26, 26))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(406, 406, 406)
@@ -349,14 +374,14 @@ public class HomeForm extends javax.swing.JFrame {
                                         .addGap(68, 68, 68))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                                .addGap(11, 11, 11)
+                                                .addComponent(jLabel6))
                                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                                 .addComponent(inventoryLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addComponent(pxhLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                                    .addGap(11, 11, 11)
-                                                    .addComponent(jLabel6)))
+                                                .addComponent(importDetailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                                             .addComponent(pnhLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(pxhLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                            .addComponent(productDetailLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addGap(59, 59, 59)))
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -416,6 +441,26 @@ public class HomeForm extends javax.swing.JFrame {
         new Supplier().setVisible(true);
     }//GEN-LAST:event_SupplierLabelMouseClicked
 
+    private void pnhLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnhLabelMouseClicked
+        new ImportCoupon().setVisible(true);
+    }//GEN-LAST:event_pnhLabelMouseClicked
+
+    private void productDetailLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_productDetailLabelMouseClicked
+        new ProductDetail().setVisible(true);
+    }//GEN-LAST:event_productDetailLabelMouseClicked
+
+    private void inventoryLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_inventoryLabelMouseClicked
+        new Kho().setVisible(true);
+    }//GEN-LAST:event_inventoryLabelMouseClicked
+
+    private void importDetailLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_importDetailLabelMouseClicked
+        new ImportDetail().setVisible(true);
+    }//GEN-LAST:event_importDetailLabelMouseClicked
+
+    private void OrderDetailLabelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OrderDetailLabelMouseClicked
+        new OrderDetail().setVisible(true);
+    }//GEN-LAST:event_OrderDetailLabelMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -460,6 +505,7 @@ public class HomeForm extends javax.swing.JFrame {
     private javax.swing.JLabel ProductLabel;
     private javax.swing.JLabel SupplierLabel;
     private javax.swing.JLabel UserLabel;
+    private javax.swing.JLabel importDetailLabel;
     private javax.swing.JLabel inventoryLabel;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
@@ -481,7 +527,6 @@ public class HomeForm extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JLabel pnhLabel;
-    private javax.swing.JLabel pxhLabel;
-    private javax.swing.JLabel pxhLabel1;
+    private javax.swing.JLabel productDetailLabel;
     // End of variables declaration//GEN-END:variables
 }
